@@ -1,5 +1,5 @@
 # Expandable_List_Demo
-Expandable RecyclerView 
+Expandable Recycler View 
 
 ![](media/demo-video.gif)
 
@@ -9,6 +9,6 @@ Expandable RecyclerView
  * DataBinding, ViewModel, RxJava
  
 # Server Data
- * [db.json File](db.json)
- * By [My Json Server](https://my-json-server.typicode.com/)
+ * Data Format : [db.json](db.json)
+ + By [My Json Server](https://my-json-server.typicode.com/)
  
