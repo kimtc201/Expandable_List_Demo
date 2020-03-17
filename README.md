@@ -1,5 +1,5 @@
 # Expandable_List_Demo
 Expandable List Demo
 
-# 스크린샷
-![](media/screenshot.png)
+# 데모
+![](media/demo-video.gif)
