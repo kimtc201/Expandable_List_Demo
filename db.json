@@ -1,7 +1,7 @@
 {
   "parts": {
-    "resRsltCd": "100",
-    "resRsltCnte": "Success",
+    "resResultCode": "100",
+    "resResultContents": "Success",
     "partResultList": [
       {
         "id": "01",
@@ -70,8 +70,8 @@
     ]
   },
   "lists": {
-    "resRsltCd": "100",
-    "resRsltCnte": "Success",
+    "resResultCode": "100",
+    "resResultContents": "Success",
     "PartList": [
       {
         "code": "01",
