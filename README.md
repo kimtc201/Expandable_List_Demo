@@ -10,7 +10,7 @@ Expandable Recycler View
  * Top Button - move to Top
  
 # 구성
- * DI Framwork(Dagger2)
+ * DI Framework(Dagger2)
  * Library - OkHttp3, Retrofit2
  * DataBinding, ViewModel, RxJava
  
