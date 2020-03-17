@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="viewCount" type="Integer"/>
+        <import type="android.view.View"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutOpinion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_vertical_margin"
+                android:background="@color/pale_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:id="@+id/textViewDoctorOpinion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_examination_report"
+                    android:textSize="15sp"
+                    android:textColor="@color/blue_blue"
+                    android:gravity="center_vertical"
+                    android:drawableStart="@drawable/ico_report_small"
+                    android:drawablePadding="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                    android:id="@+id/buttonOpinion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ico_question"
+                    android:contentDescription="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewDoctorOpinion"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDoctorOpinion" />
+
+            <TextView
+                    android:id="@+id/textViewDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/input_spacing"
+                    android:textColor="@color/dusk"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDoctorOpinion"
+                    tools:text="Good"
+                    style="@style/TextView.Contents.Guide"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutTable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:padding="@dimen/activity_vertical_margin"
+                android:background="@color/pale_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutOpinion">
+
+            <TextView
+                    android:id="@+id/textViewTableLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/label_spacing"
+                    android:paddingEnd="@dimen/label_spacing"
+                    android:paddingTop="11dp"
+                    android:paddingBottom="11dp"
+                    android:textSize="13sp"
+                    android:text="@string/label_part_table_header_item"
+                    android:textColor="@color/gunmetal"
+                    android:background="@color/pale_grey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewData1Label"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                    android:id="@+id/textViewData1Label"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/label_spacing"
+                    android:paddingEnd="0dp"
+                    android:background="@color/pale_grey"
+                    android:gravity="center_vertical"
+                    android:visibility="@{viewCount >= 1 ? View.VISIBLE : View.GONE}"
+                    android:textColor="@color/gunmetal"
+                    app:layout_constraintStart_toEndOf="@id/textViewTableLabel"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewData2Label"
+                    app:layout_constraintTop_toTopOf="@id/textViewTableLabel"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewTableLabel"
+                    tools:text="2015.01.01"/>
+
+            <TextView
+                    android:id="@+id/textViewData2Label"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/label_spacing"
+                    android:paddingEnd="0dp"
+                    android:background="@color/pale_grey"
+                    android:gravity="center_vertical"
+                    android:visibility="@{viewCount >= 2 ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toEndOf="@id/textViewData1Label"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewData3Label"
+                    app:layout_constraintTop_toTopOf="@id/textViewTableLabel"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewTableLabel"
+                    tools:text="2016.01.01"/>
+
+            <TextView
+                    android:id="@+id/textViewData3Label"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/label_spacing"
+                    android:paddingEnd="0dp"
+                    android:background="@color/pale_grey"
+                    android:gravity="center_vertical"
+                    android:visibility="@{viewCount >= 3 ? View.VISIBLE : View.GONE}"
+                    android:textColor="@color/gunmetal"
+                    app:layout_constraintStart_toEndOf="@id/textViewData2Label"
+                    app:layout_constraintTop_toTopOf="@id/textViewTableLabel"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewTableLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="2017.01.01"/>
+
+            <LinearLayout
+                    android:id="@+id/layoutTest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewTableLabel"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

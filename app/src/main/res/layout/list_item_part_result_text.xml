@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutOpinion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_vertical_margin"
+                android:background="@color/pale_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:id="@+id/textViewDoctorOpinion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_examination_report"
+                    android:textSize="15sp"
+                    android:textColor="@color/blue_blue"
+                    android:gravity="center_vertical"
+                    android:drawableStart="@drawable/ico_report_small"
+                    android:drawablePadding="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:fontFamily="@font/nanum_square_otf_bold"/>
+
+            <ImageView
+                    android:id="@+id/buttonOpinion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ico_question"
+                    android:contentDescription="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewDoctorOpinion"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDoctorOpinion"
+                    app:fontFamily="@font/nanum_square_otf_bold"/>
+
+            <TextView
+                    android:id="@+id/textViewDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/input_spacing"
+                    android:textColor="@color/dusk"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDoctorOpinion"
+                    tools:text="Good"
+                    style="@style/TextView.Contents.Guide"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutValue1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:padding="@dimen/activity_vertical_margin"
+                android:background="@color/pale_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutOpinion">
+
+            <TextView
+                    android:id="@+id/textViewCheckupDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_date"
+                    android:textSize="13sp"
+                    android:textColor="@color/brownish_grey_two"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:fontFamily="@font/nanum_square_otf_bold"/>
+
+            <TextView
+                    android:id="@+id/textViewCheckupDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/brownish_grey_two"
+                    app:layout_constraintStart_toEndOf="@id/textViewCheckupDateLabel"
+                    app:layout_constraintBaseline_toBaselineOf="@id/textViewCheckupDateLabel"
+                    tools:text="2015.01.01"
+                    app:fontFamily="@font/nanum_square_otf_bold"/>
+
+            <TextView
+                    android:id="@+id/textViewContents"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/input_spacing"
+                    android:textColor="@color/brownish_grey_two"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewCheckupDate"
+                    tools:text="Description"
+                    style="@style/TextView.Contents.Guide"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutValue2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:padding="@dimen/activity_vertical_margin"
+                android:background="@color/pale_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutValue1">
+
+            <TextView
+                    android:id="@+id/textViewCheckupDateLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/brownish_grey_two"
+                    android:text="@string/label_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:fontFamily="@font/nanum_square_otf_bold"/>
+
+            <TextView
+                    android:id="@+id/textViewCheckupDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/brownish_grey_two"
+                    app:layout_constraintStart_toEndOf="@id/textViewCheckupDateLabel2"
+                    app:layout_constraintBaseline_toBaselineOf="@id/textViewCheckupDateLabel2"
+                    tools:text="2016.01.01"
+                    app:fontFamily="@font/nanum_square_otf_bold"/>
+
+            <TextView
+                    android:id="@+id/textViewContents2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/input_spacing"
+                    android:textColor="@color/brownish_grey_two"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewCheckupDate2"
+                    tools:text="Description"
+                    style="@style/TextView.Contents.Guide"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutValue3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:padding="@dimen/activity_vertical_margin"
+                android:background="@color/pale_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutValue2">
+
+            <TextView
+                    android:id="@+id/textViewCheckupDateLabel3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/brownish_grey_two"
+                    android:text="@string/label_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:fontFamily="@font/nanum_square_otf_bold"/>
+
+            <TextView
+                    android:id="@+id/textViewCheckupDate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/brownish_grey_two"
+                    app:layout_constraintStart_toEndOf="@id/textViewCheckupDateLabel3"
+                    app:layout_constraintBaseline_toBaselineOf="@id/textViewCheckupDateLabel3"
+                    tools:text="2017.01.01"
+                    app:fontFamily="@font/nanum_square_otf_bold"/>
+
+            <TextView
+                    android:id="@+id/textViewContents3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/input_spacing"
+                    android:textColor="@color/brownish_grey_two"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewCheckupDate3"
+                    tools:text="Description"
+                    style="@style/TextView.Contents.Guide"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".healthpilot.activity.checkup.PartResultActivity"
+        tools:ignore="Autofill,LabelFor,TextFields">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/bg_toolbar"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <TextView
+                        android:id="@+id/textViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        style="@style/TextView.Title.Toolbar"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_part_result" />
+
+            <TextView
+                android:id="@+id/buttonTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/contents_padding"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:text="@string/label_scroll_top"
+                android:gravity="center"
+                android:background="@drawable/background_circle_top_button"
+                app:fontFamily="@font/nanum_square_otf_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/buttonExpandAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/contents_padding"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:text="@string/label_expand_all"
+                android:gravity="center"
+                android:background="@drawable/background_circle_expand_button"
+                app:fontFamily="@font/nanum_square_otf_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

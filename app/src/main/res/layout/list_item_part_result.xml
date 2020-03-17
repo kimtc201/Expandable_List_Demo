@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="value" type="com.github.tckim.expandable_list_demo.network.model.PartResult"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="?attr/selectableItemBackground">
+
+        <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="@{value.subPartName}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewArrow"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="Sub Title"/>
+
+        <ImageView
+                android:id="@+id/imageViewHighlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/ic_dot_orange"
+                android:contentDescription="@null"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/textViewName"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewArrow"
+                app:layout_constraintTop_toTopOf="@+id/textViewName"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewName"
+                tools:visibility="visible"/>
+
+        <ImageView
+                android:id="@+id/imageViewArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toEndOf="@+id/imageViewHighlight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewName"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewName"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

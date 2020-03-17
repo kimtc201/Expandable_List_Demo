@@ -1,0 +1,11 @@
+def applicationProperties = new Properties()
+file("application.properties").withInputStream { applicationProperties.load(it) }
+
+def applicationKeySet = [:]
+applicationKeySet.API_URL = "API_URL"
+applicationKeySet.API_URL_DEV = "API_URL_DEV"
+applicationKeySet.API_URL_STG = "API_URL_STG"
+applicationKeySet.API_URL_PRD = "API_URL_PRD"
+
+ext.applicationProperties = applicationProperties
+ext.applicationKeySet = applicationKeySet

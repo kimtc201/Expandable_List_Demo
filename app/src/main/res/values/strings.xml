@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Expandable list Demo</string>
+
+    <string name="label_date">Date&#160;:&#160;</string>
+    <string name="label_part_table_header_item">Item</string>
+    <string name="label_examination_report">Result of Examination</string>
+    <string name="label_expand_all">All\nOpen</string>
+    <string name="label_collapse_all">All\nClose</string>
+    <string name="label_scroll_top">Top</string>
+
+    <string name="format_activity_title">%1$s (%2$s)</string>
+    <string name="format_report_date">yyyy.MM.dd</string>
+    <string name="format_part_standard">range : %1$s</string>
+</resources>

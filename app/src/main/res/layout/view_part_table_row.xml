@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="part" type="com.github.tckim.expandable_list_demo.network.model.PartResultDetail" />
+
+        <variable name="viewCount" type="Integer" />
+
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <View
+            android:layout_width="@dimen/line_width"
+            android:layout_height="0dp"
+            android:background="@color/pale_grey"
+            app:layout_constraintBottom_toBottomOf="@id/textViewExaminationLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textViewExaminationLabel" />
+
+        <TextView
+            android:id="@+id/textViewExaminationLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/label_spacing"
+            android:paddingTop="11dp"
+            android:paddingEnd="@dimen/label_spacing"
+            android:paddingBottom="11dp"
+            android:text="@{part.examName}"
+            android:textColor="@color/gunmetal"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/textViewData1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewDividerPin"
+            android:layout_width="@dimen/line_width"
+            android:layout_height="0dp"
+            android:background="@color/light_blue_grey_two"
+            app:layout_constraintBottom_toBottomOf="@id/textViewExaminationLabel"
+            app:layout_constraintEnd_toEndOf="@id/textViewExaminationLabel"
+            app:layout_constraintTop_toTopOf="@id/textViewExaminationLabel" />
+
+        <TextView
+            android:id="@+id/textViewData1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/label_spacing"
+            android:paddingEnd="@dimen/label_spacing"
+            android:text="@{part.result1}"
+            android:visibility="@{viewCount >= 1 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/textViewExaminationLabel"
+            app:layout_constraintEnd_toStartOf="@+id/textViewData2"
+            app:layout_constraintStart_toEndOf="@id/textViewExaminationLabel"
+            app:layout_constraintTop_toTopOf="@id/textViewExaminationLabel" />
+
+        <View
+            android:layout_width="@dimen/line_width"
+            android:layout_height="0dp"
+            android:background="@color/pale_grey"
+            app:layout_constraintBottom_toBottomOf="@id/textViewExaminationLabel"
+            app:layout_constraintEnd_toEndOf="@id/textViewData1"
+            app:layout_constraintTop_toTopOf="@id/textViewExaminationLabel" />
+
+        <TextView
+            android:id="@+id/textViewData2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/label_spacing"
+            android:paddingEnd="@dimen/label_spacing"
+            android:text="@{part.result2}"
+            android:visibility="@{viewCount >= 2 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/textViewExaminationLabel"
+            app:layout_constraintEnd_toStartOf="@+id/textViewData3"
+            app:layout_constraintStart_toEndOf="@id/textViewData1"
+            app:layout_constraintTop_toTopOf="@id/textViewExaminationLabel" />
+
+        <View
+            android:layout_width="@dimen/line_width"
+            android:layout_height="0dp"
+            android:background="@color/pale_grey"
+            app:layout_constraintBottom_toBottomOf="@id/textViewExaminationLabel"
+            app:layout_constraintEnd_toEndOf="@id/textViewData2"
+            app:layout_constraintTop_toTopOf="@id/textViewExaminationLabel" />
+
+        <TextView
+            android:id="@+id/textViewData3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/label_spacing"
+            android:paddingEnd="@dimen/label_spacing"
+            android:text="@{part.result3}"
+            android:visibility="@{viewCount >= 3 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/textViewExaminationLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewData2"
+            app:layout_constraintTop_toTopOf="@id/textViewExaminationLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
