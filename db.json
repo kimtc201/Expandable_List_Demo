@@ -6,24 +6,90 @@
       {
         "id": "01",
         "flag": "2",
-        "subTitle": "Nicotine test",
+        "subTitle": "SubTitle1 Test",
         "priority": "S",
         "description": "TABLE DESCRIPTION",
         "subDateList": [
           {
             "no": "01",
-            "ordDt": "2020-01-17"
+            "ordDt": "2020-01-01"
           },
           {
             "no": "02",
-            "ordDt": "2014-02-28"
+            "ordDt": "2019-01-01"
           }
         ],
         "subResultList": [
           {
             "code": "01",
-            "name": "Cotinine",
+            "name": "Item Name 1",
             "range": "0~40",
+            "opinion": "Good",
+            "result1": "1916",
+            "result2": "2994",
+            "colorFlag1": "2",
+            "colorFlag2": "2"
+          },
+          {
+            "code": "02",
+            "name": "Item Name 2",
+            "range": "0~40",
+            "opinion": "Not Bad",
+            "result1": "12",
+            "result2": "35",
+            "colorFlag1": "1",
+            "colorFlag2": "0"
+          }
+        ]
+      },
+      {
+        "id": "02",
+        "flag": "1",
+        "subTitle": "SubTitle2 Test",
+        "priority": "E",
+        "description": "TEXT DESCRIPTION",
+        "subDateList": [
+          {
+            "no": "01",
+            "ordDt": "2020-01-01"
+          },
+          {
+            "no": "02",
+            "ordDt": "2019-01-01"
+          }
+        ],
+        "subResultList": [
+          {
+            "code": "03",
+            "name": "Item Name1",
+            "opinion": "Success",
+            "result1": "Result1 OK",
+            "result2": "Result2 Error"
+          }
+        ]
+      },
+      {
+        "id": "03",
+        "flag": "2",
+        "subTitle": "SubTitle3 Test",
+        "priority": "S",
+        "description": "TABLE DESCRIPTION",
+        "subDateList": [
+          {
+            "no": "01",
+            "ordDt": "2020-01-01"
+          },
+          {
+            "no": "02",
+            "ordDt": "2019-01-01"
+          }
+        ],
+        "subResultList": [
+          {
+            "code": "01",
+            "name": "Item Name 1",
+            "range": "0~40",
+            "opinion": "Bad",
             "result1": "1916",
             "result2": "2994",
             "colorFlag1": "2",
@@ -33,6 +99,7 @@
             "code": "02",
             "name": "Tar",
             "range": "0~40",
+            "opinion": "Excellent",
             "result1": "12",
             "result2": "35",
             "colorFlag1": "1",
@@ -41,29 +108,28 @@
         ]
       },
       {
-        "id": "01",
+        "id": "04",
         "flag": "1",
-        "subTitle": "Pulmonary Fuction Test",
+        "subTitle": "SubTitle4 Test",
         "priority": "E",
         "description": "TEXT DESCRIPTION",
         "subDateList": [
           {
             "no": "01",
-            "ordDt": "2020-01-17"
+            "ordDt": "2020-01-01"
           },
           {
             "no": "02",
-            "ordDt": "2014-02-28"
+            "ordDt": "2019-01-01"
           }
         ],
         "subResultList": [
           {
             "code": "03",
-            "name": "Pulmonary Fuction Test",
-            "pohEitmSeq": "1",
-            "mdscJgmtCnte": "Success",
+            "name": "SubTitle4 Test",
+            "opinion": "Success",
             "result1": "Result1 OK",
-            "result2": "Result2 Error"
+            "result2": "Result2 OK"
           }
         ]
       }
