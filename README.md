@@ -8,7 +8,7 @@ Expandable RecyclerView
  * Library - OkHttp3, Retrofit2
  * DataBinding, ViewModel, RxJava
  
-# Server
- * [My Json Server](https://my-json-server.typicode.com/)
- * See [db.json File](db.json)
+# Server Data
+ * [db.json File](db.json)
+ * By [My Json Server](https://my-json-server.typicode.com/)
  
