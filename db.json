@@ -22,7 +22,7 @@
         "subResultList": [
           {
             "code": "01",
-            "name": "Item Name 1",
+            "name": "Item 1",
             "range": "0~40",
             "opinion": "Good",
             "result1": "1916",
@@ -32,7 +32,7 @@
           },
           {
             "code": "02",
-            "name": "Item Name 2",
+            "name": "Item 2",
             "range": "0~40",
             "opinion": "Not Bad",
             "result1": "12",
@@ -61,7 +61,7 @@
         "subResultList": [
           {
             "code": "03",
-            "name": "Item Name1",
+            "name": "Item 1",
             "opinion": "Success",
             "result1": "Result1 OK",
             "result2": "Result2 Error"
@@ -87,7 +87,7 @@
         "subResultList": [
           {
             "code": "01",
-            "name": "Item Name 1",
+            "name": "Item 3",
             "range": "0~40",
             "opinion": "Bad",
             "result1": "1916",
@@ -97,7 +97,7 @@
           },
           {
             "code": "02",
-            "name": "Tar",
+            "name": "Item 4",
             "range": "0~40",
             "opinion": "Excellent",
             "result1": "12",
@@ -126,7 +126,7 @@
         "subResultList": [
           {
             "code": "03",
-            "name": "SubTitle4 Test",
+            "name": "Item 5",
             "opinion": "Success",
             "result1": "Result1 OK",
             "result2": "Result2 OK"
