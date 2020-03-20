@@ -10,9 +10,11 @@ Expandable Recycler View
  * Top Button - move to Top
  
 # 구성
+ * Language - kotlin
  * DI Framework(Dagger2)
  * Library - OkHttp3, Retrofit2
- * DataBinding, ViewModel, RxJava
+ * Jetpack - DataBinding, ViewModel, LiveData, MultiDex
+ * RxJava
  
 # 서버
  * Data Format : See [db.json](db.json) File
