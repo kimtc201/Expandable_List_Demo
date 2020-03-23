@@ -24,5 +24,8 @@ android:
       - 'google-gdk-license-.+'
       - 'android-sdk-preview-license-.+'
 
+before_install:
+  - chmod +x gradlew
+
 script:
   - ./gradlew build
