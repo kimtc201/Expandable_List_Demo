@@ -15,14 +15,10 @@ android:
       - platform-tools
       - build-tools-28.0.3
       - android-28
-      - extra-google-m2repository
-      - extra-android-m2repository
       - extra-android-support
 
     licenses:
       - 'android-sdk-license-.+'
-      - 'google-gdk-license-.+'
-      - 'android-sdk-preview-license-.+'
 
 before_install:
   - chmod +x gradlew
