@@ -16,7 +16,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        archivesBaseName = "TCKIM_" + versionName + "_" + new Date().format("yyyyMMdd_HHmmss")
+        archivesBaseName = "Expandable_List_Demo_v" + versionName + "_" + new Date().format("yyyyMMdd_HHmmss") + "_by_TCKIM"
         buildConfigField("String", applicationKeySet.API_URL, applicationProperties.get(applicationKeySet.API_URL_PRD))
     }
 
