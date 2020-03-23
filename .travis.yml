@@ -2,15 +2,22 @@ language: android
 jdk:
   - oraclejdk8
 sudo: required
+
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+      - oracle-java8-set-default
+
 android:
-      components:
-        - tools
-        - platform-tools
-        - build-tools-28.0.3
-        - android-28
-        - extra-google-m2repository
-        - extra-android-m2repository
-        - extra-android-support
+    components:
+      - tools
+      - platform-tools
+      - build-tools-28.0.3
+      - android-28
+      - extra-google-m2repository
+      - extra-android-m2repository
+      - extra-android-support
 
     licenses:
       - 'android-sdk-license-.+'
