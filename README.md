@@ -1,5 +1,5 @@
-# Expandable_List_Demo
-Expandable Recycler View ![](https://travis-ci.com/kimtc201/Expandable_List_Demo.svg?branch=master)
+# Expandable_List_Demo  ![](https://travis-ci.com/kimtc201/Expandable_List_Demo.svg?branch=master)
+Expandable Recycler View
 
 ![](media/demo-video.gif)
 
