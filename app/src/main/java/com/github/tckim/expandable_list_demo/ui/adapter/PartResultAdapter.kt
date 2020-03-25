@@ -17,6 +17,7 @@ import com.github.tckim.expandable_list_demo.databinding.*
 import com.github.tckim.expandable_list_demo.network.model.PartResult
 import com.github.tckim.expandable_list_demo.network.model.PriorityType
 import com.github.tckim.expandable_list_demo.ui.setTextColorRes
+import com.github.tckim.expandable_list_demo.ui.setThrottledClickListener
 
 class PartResultAdapter : RecyclerView.Adapter<PartResultAdapter.ViewHolder>(), Observer<List<PartResult>> {
 
@@ -63,7 +64,7 @@ class PartResultAdapter : RecyclerView.Adapter<PartResultAdapter.ViewHolder>(), 
                     else
                         holder.binding.imageViewHighlight.setImageResource(R.drawable.ic_dot_orange)
 
-                    holder.binding.root.setOnClickListener {
+                    holder.binding.root.setThrottledClickListener {
                         val expandItem = expandableItems[item.expandableItemIndex]
                         val expandPosition = items.indexOf(it.tag) + 1
                         if (expandItem.isExpanded) {
@@ -119,7 +120,7 @@ class PartResultAdapter : RecyclerView.Adapter<PartResultAdapter.ViewHolder>(), 
 
                         if (!(it.description.isNullOrBlank())) {
                             holder.binding.buttonOpinion.visibility = VISIBLE
-                            holder.binding.buttonOpinion.setOnClickListener { _ ->
+                            holder.binding.buttonOpinion.setThrottledClickListener { _ ->
                                 onItemClickListener?.invoke(
                                     it.subPartName,
                                     it.description,
@@ -167,7 +168,7 @@ class PartResultAdapter : RecyclerView.Adapter<PartResultAdapter.ViewHolder>(), 
                             if (value.isNotEmpty()) {
                                 if (!(it.description.isNullOrBlank() && value[0].maleRange.isNullOrBlank())) {
                                     holder.binding.buttonOpinion.visibility = VISIBLE
-                                    holder.binding.buttonOpinion.setOnClickListener { _ ->
+                                    holder.binding.buttonOpinion.setThrottledClickListener { _ ->
                                         onItemClickListener?.invoke(
                                             it.subPartName,
                                             it.description,
@@ -202,7 +203,7 @@ class PartResultAdapter : RecyclerView.Adapter<PartResultAdapter.ViewHolder>(), 
 
                         if (!(it.description.isNullOrBlank())) {
                             holder.binding.buttonOpinion.visibility = VISIBLE
-                            holder.binding.buttonOpinion.setOnClickListener { _ ->
+                            holder.binding.buttonOpinion.setThrottledClickListener { _ ->
                                 onItemClickListener?.invoke(
                                     it.subPartName,
                                     it.description,
@@ -250,7 +251,7 @@ class PartResultAdapter : RecyclerView.Adapter<PartResultAdapter.ViewHolder>(), 
                                 if (!item.maleRange.isNullOrBlank()) {
                                     textViewExaminationLabel.paintFlags =
                                         textViewExaminationLabel.paintFlags or UNDERLINE_TEXT_FLAG
-                                    textViewExaminationLabel.setOnClickListener {
+                                    textViewExaminationLabel.setThrottledClickListener {
                                         onItemClickListener?.invoke(
                                             item.examName,
                                             "",

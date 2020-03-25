@@ -3,11 +3,11 @@ package com.github.tckim.expandable_list_demo.network
 import androidx.lifecycle.MutableLiveData
 import com.github.tckim.expandable_list_demo.app.reactive.Disposer
 import com.github.tckim.expandable_list_demo.network.response.Response
+import com.github.tckim.expandable_list_demo.util.disposer
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
-import com.github.tckim.expandable_list_demo.util.disposer
 
 class NetworkExecutor<T : Response> {
 

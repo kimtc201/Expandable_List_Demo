@@ -12,6 +12,7 @@ import com.github.tckim.expandable_list_demo.R
 import com.github.tckim.expandable_list_demo.databinding.ListItemArrowTextBinding
 import com.github.tckim.expandable_list_demo.network.model.Part
 import com.github.tckim.expandable_list_demo.network.model.PriorityType
+import com.github.tckim.expandable_list_demo.ui.setThrottledClickListener
 
 class PartAdapter : RecyclerView.Adapter<PartAdapter.ViewHolder>(), Observer<List<Part>> {
 
@@ -30,7 +31,7 @@ class PartAdapter : RecyclerView.Adapter<PartAdapter.ViewHolder>(), Observer<Lis
         holder.binding.imageViewHighlight.setImageResource( if(item.priorityFlag == PriorityType.SHORT) R.drawable.ic_dot_red else R.drawable.ic_dot_orange)
 
         holder.binding.root.animation = AnimationUtils.loadAnimation(holder.binding.root.context, R.anim.fade_scale_animation)
-        holder.binding.root.setOnClickListener {
+        holder.binding.root.setThrottledClickListener {
             holder.binding.imageView.animate().setDuration(200).translationX(20f).setListener(
                 object : Animator.AnimatorListener{
                     override fun onAnimationRepeat(animation: Animator?) {}
